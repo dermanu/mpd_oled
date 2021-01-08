@@ -54,7 +54,7 @@ int draw_spectrum(ArduiPi_OLED &display, int x_start, int y_start, int width,
 
   // Draw spectrum graph axes
   display.drawFastHLine(x_start, height - 1 - y_start, graph_width, WHITE);
-/ for (int i=0; i<num_bars; i++) {
+  for (int i=0; i<num_bars; i++) {
      //map vals range to graph ht
      int val = bar_height_max * spect.heights[i] / 255.0 + 0.5;
      int x = x_start + i*(bar_width+gap);

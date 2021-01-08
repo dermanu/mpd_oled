@@ -54,14 +54,14 @@ int draw_spectrum(ArduiPi_OLED &display, int x_start, int y_start, int width,
 
   // Draw spectrum graph axes
   display.drawFastHLine(x_start, height - 1 - y_start, graph_width, WHITE);
-  for (int i=0; i<num_bars; i++) {
+  // for (int i=0; i<num_bars; i++) {
     // map vals range to graph ht
-    int val = bar_height_max * spect.heights[i] / 255.0 + 0.5;
-    int x = x_start + i*(bar_width+gap);
+    // int val = bar_height_max * spect.heights[i] / 255.0 + 0.5;
+    // int x = x_start + i*(bar_width+gap);
     // int y = y_start+2;
-    if(val)
-       display.fillRect(x, y_start + height - val - 2, bar_width, val, WHITE);
-  }
+   // if(val)
+      // display.fillRect(x, y_start + height - val - 2, bar_width, val, WHITE);
+  //}
   return 0;
 }
 
@@ -170,8 +170,8 @@ void draw_text(ArduiPi_OLED &display, int x_start, int y_start, int max_len,
     str.resize(max_len);
 
   display.setTextColor(WHITE);
-  display.setCursor(x_start, y_start);
-  display.setTextSize(1);
+  display.setCursor(x_start+2, y_start+3);
+  display.setTextSize(3);
   print(display, str.c_str());
 }
 

@@ -428,7 +428,7 @@ void draw_spect_display(ArduiPi_OLED &display, const display_info &disp_info)
 
   vector<double> scroll_origin(disp_info.scroll.begin()+2,
                                disp_info.scroll.begin()+4);
-  draw_text_scroll(display, 1, 50, 20, disp_info.status.get_origin(),
+  draw_text_scroll(display, 6, 50, 20, disp_info.status.get_origin(),
       scroll_origin, disp_info.text_change.secs());
 
   //vector<double> scroll_title(disp_info.scroll.begin(),

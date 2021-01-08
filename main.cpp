@@ -410,7 +410,7 @@ void draw_clock(ArduiPi_OLED &display, const display_info &disp_info)
   draw_text(display, 22, 0, 16, disp_info.conn.get_ip_addr());
   draw_connection(display, 128-2*W, 0, disp_info.conn);
   draw_time(display, 4, 16, 4, disp_info.clock_format);
-  draw_date(display, 32, 56, 2);
+  draw_date(display, 32, 56, 1);
 }
 
 

@@ -171,7 +171,7 @@ void draw_text(ArduiPi_OLED &display, int x_start, int y_start, int max_len,
 
   display.setTextColor(WHITE);
   display.setCursor(x_start+2, y_start+3);
-  display.setTextSize(2);
+  display.setTextSize(1);
   print(display, str.c_str());
 }
 
@@ -186,7 +186,7 @@ void draw_text_scroll(ArduiPi_OLED &display, int x_start, int y_start,
   const double pixels_per_sec = scroll[0];
   const double scroll_after_secs = scroll[1];
 
-  int size = 2;
+  int size = 1;
   int W = 6*size;
   str += "     ";
   double elapsed = secs - scroll_after_secs;
